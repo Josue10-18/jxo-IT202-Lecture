@@ -25,4 +25,3 @@ if (!isset($_SESSION['login'])) {
    <a href="index.php?content=logout"><strong>Logout</strong></a>
 <?php
 }
-?>
