@@ -16,6 +16,8 @@ DESCRIBE admins;
 INSERT INTO admins
 (emailAddress, password, firstName, lastName)
 VALUES
-('jxo@njit.edu', SHA2('Xavier#2090!!', 256), 'Josue', 'Ortiz');
+('josue@shirt.com', SHA2('FZD#2005', 256), 'Josue', 'Ortiz');
 INSERT INTO admins (emailAddress, password, firstName, lastName)
-VALUES ('JUAN@guitarshop.com', SHA2('jUAN123', 256), 'Juan', 'Placenino');
+VALUES ('juan@shirtmanager.com', SHA2('Juan123', 256), 'Juan', 'Placenino');
+
+SELECT * FROM admins;

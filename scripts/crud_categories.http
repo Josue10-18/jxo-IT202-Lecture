@@ -1,7 +1,7 @@
 POST http://localhost:3000/addcategory.test.php
 Content-Type: application/x-www-form-urlencoded
 
-categoryID=700
+categoryID=800
 &categoryCode=Shirts
 &categoryName=GraphicTee 
 
@@ -25,4 +25,4 @@ categoryID=100
 POST http://localhost:3000/removecategory.test.php
 Content-Type: application/x-www-form-urlencoded
 
-categoryID=500
+categoryID=800

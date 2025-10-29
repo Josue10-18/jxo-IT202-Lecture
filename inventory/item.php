@@ -17,7 +17,7 @@ class Item
        $this->categoryID = $categoryID;
        $this->listPrice = $listPrice;
    }
-function __toString()
+   function __toString()
    {
        $output = "<h2>Item : $this->itemID</h2>" .
            "<h2>Name: $this->itemName</h2>\n";
@@ -30,17 +30,17 @@ function __toString()
        $query = "INSERT INTO items VALUES (?, ?, ?, ?)";
        $stmt = $db->prepare($query);
        $stmt->bind_param(
-           "____",
+           "isid",
            $this->itemID,     // integer data type
            $this->itemName,   // string data type
            $this->categoryID, // integer data type
            $this->listPrice   // float data type
        );
-   $result = $stmt->execute();
+       $result = $stmt->execute();
        $db->close();
        return $result;
    }
-static function getItems()
+   static function getItems()
    {
        $db = getDB();
        $query = "SELECT * FROM items";
@@ -63,7 +63,7 @@ static function getItems()
            return NULL;
        }
    }
-static function findItem($itemID)
+   static function findItem($itemID)
    {
        $db = getDB();
        $query = "SELECT * FROM items WHERE itemID = $itemID";
@@ -99,7 +99,7 @@ static function findItem($itemID)
        $db->close();
        return $result;
    }
-function removeItem()
+   function removeItem()
    {
        $db = getDB();
        $query = "DELETE FROM items WHERE itemID = $this->itemID";
@@ -107,5 +107,28 @@ function removeItem()
        $db->close();
        return $result;
    }
+static function getItemsByCategory($categoryID)
+   {
+       $db = getDB();
+       $query = "SELECT * from items where categoryID = $categoryID";
+       $result = $db->query($query);
+       if (mysqli_num_rows($result) > 0) {
+           $items = array();
+           while ($row = $result->fetch_array(MYSQLI_ASSOC)) {
+               $item = new Item(
+                   $row['itemID'],
+                   $row['itemName'],
+                   $row['categoryID'],
+                   $row['listPrice']
+               );
+               array_push($items, $item);
+           }
+           $db->close();
+           return $items;
+       } else {
+           $db->close();
+           return NULL;
+       }
+    }           
 }
 ?>

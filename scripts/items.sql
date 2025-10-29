@@ -9,7 +9,7 @@ CREATE TABLE items (
 INSERT INTO items
 (itemID, itemName, categoryID, listPrice)
 VALUES
-(1000, 'Fender Stratocaster', 100, 699.00);
+(1000, 'AIR FORCE 1', 100, 699.00);
 
 SELECT * from items;
 

@@ -8,7 +8,7 @@ CREATE TABLE categories (
 INSERT INTO categories
 (categoryID, categoryCode, categoryName)
 VALUES
-(100, 'GTR', 'Guitars');
+(500, 'GRP', 'Shirts');
 
 -- Optional
 DELETE from categories where categoryID = 100;
