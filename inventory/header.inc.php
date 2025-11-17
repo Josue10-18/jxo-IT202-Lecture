@@ -17,7 +17,7 @@
   }
 </style>
 <div class="header-div">
-  <img src="images/logo.png" alt="Guitar Shop Logo">
+  <img src="images/shirt logo.png!bw700" alt="Shirt Shop Logo">
   <div>
 <h1>SHIRT SHOP</h1>
 <h2>Inventory Management</h2>
