@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 require_once("config.php");
 require_once("category.php");
@@ -9,7 +10,7 @@ require_once("item.php");
 <head>
    <title>Inventory Helper</title>
    <link rel="stylesheet" type="text/css" href="styles.css">
-   <link rel="icon" type="image/png" href="images/logo.png">
+   <link rel="icon" type="image/png" href="images/shirt logo.png">
 </head>
 <body>
    <header>
@@ -34,3 +35,5 @@ require_once("item.php");
    </footer>
 </body>
 </html>
+<?php ob_end_flush(); 
+?>

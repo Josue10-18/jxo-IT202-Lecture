@@ -15,7 +15,16 @@
            alert("Action canceled.");
        }
    }
+   function selectFirstCategory() {
+    const select = document.querySelector('select[name="categoryID"]');
+    if (select && select.options.length > 0) {
+        select.selectedIndex = 0;
+     }
+    }
+        selectFirstCategory();
 </script>
+
+    
 <?php
 require_once("category.php");
 $categories = Category::getCategories();

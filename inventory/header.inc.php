@@ -1,6 +1,6 @@
 <style>
   .header-div {
-       background-color: #ca7834;
+       background-color: #333333;
        padding: 2px;
        display: flex;
        align-items: center;
@@ -17,7 +17,7 @@
   }
 </style>
 <div class="header-div">
-  <img src="images/shirt logo.png!bw700" alt="Shirt Shop Logo">
+  <img src="images/shirt logo.png" alt="Shirt Shop Logo">
   <div>
 <h1>SHIRT SHOP</h1>
 <h2>Inventory Management</h2>
