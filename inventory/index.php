@@ -8,6 +8,8 @@ require_once("item.php");
 <!DOCTYPE html>
 <html>
 <head>
+<script src="realtime.js"></script>
+
    <title>Inventory Helper</title>
    <link rel="stylesheet" type="text/css" href="styles.css">
    <link rel="icon" type="image/png" href="images/shirt logo.png">
@@ -28,6 +30,14 @@ require_once("item.php");
                include("main.inc.php");
            }
            ?>
+
+        <aside>
+           <?php include("aside.inc.php"); ?>
+           <script>
+               getRealTime();
+               setInterval(getRealTime, 5000);
+           </script>
+       </aside>
        </main>
    </section>
    <footer>
@@ -36,4 +46,6 @@ require_once("item.php");
 </body>
 </html>
 <?php ob_end_flush(); 
+
+
 ?>

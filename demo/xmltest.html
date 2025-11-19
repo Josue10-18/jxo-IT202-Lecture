@@ -7,6 +7,7 @@
             var carlist = document.getElementById("carlist");
             carlist.innerHTML = "";
             var URL = "xmltest.php";
+            console.log("URL: "+ URL);
             var request = new XMLHttpRequest();
             request.open("GET", "xmltest.php", true);
             request.onreadystatechange = function () {

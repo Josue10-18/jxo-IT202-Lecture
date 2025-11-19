@@ -129,6 +129,32 @@ static function getItemsByCategory($categoryID)
            $db->close();
            return NULL;
        }
-    }           
+    }     
+
+static function getTotalItems()
+   {
+ $db = getDB();
+    $query = "SELECT COUNT(itemID) FROM items";
+    $result = $db->query($query);
+    $row = $result->fetch_array();
+    if ($row) {
+        return $row[0];
+    } else {
+        return NULL;
+    }
+   }
+   
+static function getTotalListPrice()
+{
+    $db = getDB();
+    $query = "SELECT SUM(listPrice) FROM items";
+    $result = $db->query($query);
+    $row = $result->fetch_array();
+    if ($row) {
+        return $row[0];
+    } else {
+        return NULL;
+    }
+}
 }
 ?>

@@ -1,4 +1,4 @@
-<?php
+ <?php
 require_once('database.php');
 class Category
 {
@@ -99,6 +99,19 @@ class Category
        $db->close();
        return $result;
    }
+
+static function getTotalCategories()
+{
+   $db = getDB();
+   $query = "SELECT COUNT(categoryID) FROM categories";
+   $result = $db->query($query);
+   $row = $result->fetch_array();
+   if ($row) {
+       return $row[0];
+   } else {
+       return NULL;
+   }
+}
 
 }
 ?>
