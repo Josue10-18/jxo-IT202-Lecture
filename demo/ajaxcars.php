@@ -12,4 +12,14 @@ switch ($make) {
        break;
    case "ford":
        echo "Fusion,Mustang,Taurus";
+
+           //5th 
+    case "honda":
+        echo "Civic,Accord,CR-V";
+        break;
+
+    default:
+        echo "";
+        break;
+
 }

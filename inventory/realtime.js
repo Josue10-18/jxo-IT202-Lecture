@@ -1,4 +1,8 @@
 function getRealTime() {
+
+    var URL = "realtime.php";
+    console.log("URL: " + URL);
+    
  // retrieve the DOM objects to place the content
  var domcategories = document.getElementById("categorycount");
  var domitems = document.getElementById("itemcount");

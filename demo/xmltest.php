@@ -3,6 +3,8 @@
 
  $carlot = $doc->createElement("carlot");
  $carlot = $doc->appendChild($carlot);
+
+
  $car1 = $doc->createElement("car");
  $car1 = $carlot->appendChild($car1);
  $make1 = $doc->createAttribute("make");
@@ -13,6 +15,8 @@
  $model2 = $doc->createElement("model", "Charger");
  $model2 = $car1->appendChild($model2);
 
+
+
  $car2 = $doc->createElement("car");
  $car2 = $carlot->appendChild($car2);
  $make2 = $doc->createAttribute("make");
@@ -20,6 +24,22 @@
  $car2->appendChild($make2);
  $model3 = $doc->createElement("model", "Mustang");
  $model3 = $car2->appendChild($model3);
+
+
+ $car3 = $doc->createElement("car");
+$car3 = $carlot->appendChild($car3);
+$make3 = $doc->createAttribute("make");
+$make3->value = "Honda";
+$car3->appendChild($make3);
+
+$model4 = $doc->createElement("model", "Civic");
+$car3->appendChild($model4);
+
+$model5 = $doc->createElement("model", "Accord");
+$car3->appendChild($model5);
+
+$model6 = $doc->createElement("model", "CR-V");
+$car3->appendChild($model6);
 
  $output = $doc->saveXML();
  header("Content-type: application/xml");
