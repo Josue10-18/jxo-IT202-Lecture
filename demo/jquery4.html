@@ -1,0 +1,55 @@
+<!-- Page 255 -->
+<!DOCTYPE html>
+<html>
+<head>
+    <p>Josue Ortiz, IT202-001, Internet Applications, Unit 13 In-Class Exercise, jxo@njit.edu, 12/3/2025 </p>
+    <title>Changing Properties with jQuery</title>
+    <style>
+        div {
+            background-color: blue;
+        }
+    </style>
+
+    <!-- jQuery library (needed for $ to work) -->
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+
+            // FIRST BUTTON: Change <p> background & size
+            $("#btn1").click(function () {
+                $("p").css("background-color", "red");
+                $("p").css("font-size", "50px");
+            });
+
+            // SECOND BUTTON: Change text color, font family, bold, and h1 size
+            $("#btn2").click(function () {
+                $("p").css({
+                    "color": "blue",
+                    "font-size": "30px",
+                    "font-family": "'Times New Roman', serif",
+                    "font-weight": "bold"
+                });
+
+                $("h1").css({
+                    "font-size": "60px",
+                    "font-family": "'Times New Roman', serif",
+                    "font-weight": "bold"
+                });
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>This is my heading</h1>
+        <p>This is some content on my web page</p>
+
+        <!-- Two Buttons -->
+        <button id="btn1">Test button</button>
+        <button id="btn2">Change Text Style</button>
+    </div>
+</body>
+</html>
